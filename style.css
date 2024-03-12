@@ -19,22 +19,22 @@ p {
 
 /* cursors*/
 body {
-  cursor: url('customcursor.png') , auto;
+  cursor: url('http://www.rw-designer.com/cursor-extern.php?id=2144') , auto;
   }
   
   
 a {
 
-	cursor: url('custompointer.png'), auto;
+	cursor: url('http://www.rw-designer.com/cursor-extern.php?id=2144'), auto;
 	}
 	
 	a:hover {
 	
-	cursor: url('custompointer.png'), auto;
+	cursor: url('http://www.rw-designer.com/cursor-extern.php?id=2144'), auto;
 	}
 	a:active {
 	
-	cursor: url('custompointer.png'), auto;
+	cursor: url('http://www.rw-designer.com/cursor-extern.php?id=2144'), auto;
 	}
 	
   a:visited {
