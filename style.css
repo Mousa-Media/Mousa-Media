@@ -9,19 +9,19 @@ h1 {
     text-align:center;
     color: white;
     font-family: "Futrua";
-	src: url(fonts/FuturaT\ Regular.ttf)
+	src: url(fonts/BodoniFLF-Roman.ttf)
 }  
 
 p {
     color: white;
     font-family: "Futura";
-	src: url(fonts/FuturaLightOblique.ttf)
+	src: url(fonts/BodoniFLF-Roman.ttf)
 }
 
 
 /* cursors*/
 body {
-  cursor: url(earthcursor/another-cool-set.crs , auto;
+  cursor: url(earthcursor/another-cool-set.crs) , auto;
   }
   
   
