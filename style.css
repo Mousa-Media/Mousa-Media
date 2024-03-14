@@ -8,14 +8,14 @@ body {
 h1 {
     text-align:center;
     color: white;
-    font-family: "Futrua";
-	src: url(fonts/BodoniFLF-Roman.ttf)
+    font-family: "Futura";
+	src: url(fonts/Futura\ Condensed\ Medium.otf)
 }  
 
 p {
     color: white;
-    font-family: "Futura";
-	src: url(fonts/BodoniFLF-Roman.ttf)
+    font-family: "Roboto";
+	src: url(fonts/Futura\ Light\ Oblique.otf)
 }
 
 
