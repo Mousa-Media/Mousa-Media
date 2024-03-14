@@ -8,33 +8,35 @@ body {
 h1 {
     text-align:center;
     color: white;
-    font-family: "Menlo";
+    font-family: "Futrua";
+	src: url(fonts/Futura\ Condensed\ Medium.otf)
 }  
 
 p {
     color: white;
-    font-family: "Menlo";
+    font-family: "Futura";
+	src: url(fonts/Futura\ Condensed\ Medium.otf)
 }
 
 
 /* cursors*/
 body {
-  cursor: url('http://www.rw-designer.com/cursor-extern.php?id=2144') , auto;
+  cursor: url(earthcursor/another-cool-set.crs , auto;
   }
   
   
 a {
 
-	cursor: url('http://www.rw-designer.com/cursor-extern.php?id=2144'), auto;
+	cursor: url(earthcursor/another-cool-set.crs), auto;
 	}
 	
 	a:hover {
 	
-	cursor: url('http://www.rw-designer.com/cursor-extern.php?id=2144'), auto;
+	cursor: url(earthcursor/another-cool-set.crs), auto;
 	}
 	a:active {
 	
-	cursor: url('http://www.rw-designer.com/cursor-extern.php?id=2144'), auto;
+	cursor: url(earthcursor/another-cool-set.crs), auto;
 	}
 	
   a:visited {
