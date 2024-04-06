@@ -66,8 +66,105 @@ width:100%; height:100%; object-fit: fill; ">  </a>
 
 
      <div id="content">
+<!--Each blog is contained inside of a ".blogbox".-->
+<div class="blogbox" >
+     
+  <div class="text-container5">
+  <!--Blog date-->
+  <h1>BLOG #0.2 4/6/2024</h1>
+  <!--Blog title-->
+  <h2>Music Comics & Coding</h2>
 
-      <!--Each blog is contained inside of a ".blogbox".-->
+
+ <!--Insert the thumbnail text here!-->
+ <p class="blog">
+      Lot of updates to this site as of late, as I learn more about HTML coding. I am very excited to show ya'll my plans. </p>
+     
+   <center> <input onclick="change5()" value="Show More" ID="button5" type="submit" class="collapse5" style="cursor: url(custompointer.png), auto; position:relative; top:50%; margin: 0 auto; display:inline-block; width:30vw;height:30px;color:white; background-color:black;"/>
+ 
+
+<div class="container"
+    style="display:none;">
+<!--Insert the rest of your blog's text here!-->
+    <p class="blog">I have added a "comics" and a "music" page. The comics page is for silly doodles and comics I make. I used to draw a lot of comics as a kid and only recently have I rediscovered my love for drawing comics. These will be silly comic strips a la newspaper gags.</p>
+    <br>
+    <br>
+    <img src="/images/blogging-cat.jpeg" style="width: 90%;
+  display: block;
+  margin: 0 auto;">
+   
+    <br>
+    <br>
+    <p class="blog">The music page is far more interesting to me, I will create a curated page soley for my personal mixes, and other misc projects that I would have never put onto streaming. I want to experiment with sound more and having a platform like my website is truly helpful for my confidence, I love this site because there is not numbers, or corporate UI. Everything here is according to my own vision, so I would like my personal art to be a home here as well.</p>
+    <br>
+    <p>Thank you for your continued support and love. I hope you enjoy my direction!</p>
+
+</div>
+
+
+</center>
+
+ <script>
+ 
+ 
+      var btn = document
+          .getElementsByClassName("collapse5");
+       
+      btn[0].addEventListener("click", function () {
+          this.classList.toggle("active");
+          var content = this.nextElementSibling;
+          if (content.style.display === "block") {
+              content.style.display = "none";
+          } else {
+              content.style.display = "block";
+         
+        }
+      });
+       
+  </script>
+
+
+<script>
+function change5() {
+      var divelement = document.getElementById("button5");
+
+
+      if(divelement.style.display == 'none')
+              divelement.style.display =='block';
+      else
+              divelement.style.display = 'none';
+              hidenow = button.style.visibility = "hidden";
+  }
+</script>
+
+
+
+
+
+
+
+
+
+
+</div>
+
+
+
+
+</div>
+
+
+
+
+
+
+   
+   
+
+
+
+      
+ <!--Each blog is contained inside of a ".blogbox".-->
 <div class="blogbox" >
      
   <div class="text-container#">
@@ -453,7 +550,7 @@ function change3() {
 
 <!--This is if you don't want the button to dissapear-->
 <script>
-function change() // no ';' here
+function change();
 {
     var elem = document.getElementById("hypotheticalbutton");
     if (elem.value=="Show More") elem.value = "Show Less";
