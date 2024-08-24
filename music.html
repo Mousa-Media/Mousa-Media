@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mousa World</title>
+    <link rel="icon" href="mousaworldlogo.ico">
+    <link href="/style.css" rel="stylesheet" type="text/css" media="all">
+
+  </head>
+  
+  <body>
+  <div id="page-container">
+   <div id="content-wrap">
+ <!--1400px x 200px banner-->
+  <div id="banner">
+<a href="music"> <img src='mousamusicbanner.png' style="
+width:100%; height:100%; object-fit: fill; "> </a>
+  </div>
+ 
+
+
+     <div class="navbar">
+
+
+<a href="index"> <button id="button" class="dropbtn">home </button></a>
+
+
+
+<div class="dropdown">
+  <button id="drop" class="dropbtn">portfolio</button>
+  <div id="myDropdown" class="dropdown-content">
+    <hr class="solid">
+    <a href="/gallery">Professional</a>
+    <hr class="solid">
+    <a href="/gallery2">Creative</a>
+    <hr class="solid">
+  </div>
+</div>
+
+
+
+<a href="contact"> <button id="button" class="dropbtn">contact</button></a>
+
+
+
+<a href="blog"> <button id="button" class="dropbtn">blog </button></a>
+
+
+
+<!--add link to your bigcartel or whatever you use-->
+<a href="https://scentcrafters.com/product/ignite" target="_blank"> <button id="button" class="dropbtn" >shop </button></a>
+
+
+
+ <a href="comics"> <button id="button" class="dropbtn" >comics </button></a>
+
+ <a href="music"> <button id="button" class="dropbtn" >music </button></a>
+
+ <a href="webring"> <button id="button" class="dropbtn" >about me </button></a>
+
+ </div> 
+
+ <h1>Reporting live* from a frequency yet to be discovered</h1>
+ <p style="text-align: center; color:#e1e8e2">on the air with 76.13 MWFM where we only play whatever I want</p>
+
+ 
+ 
+
+
+    <script src="https://kit.fontawesome.com/7d18af3f82.js" crossorigin="anonymous"></script>
+</head>
+ <div class="container">
+    <div class="music-player">
+      <nav>
+        <div class="circle">
+          <i class="fa-solid fa-angles-left"></i>
+        </div>
+        <div class="circle">
+          <i class="fa-solid fa-bars"></i>
+        </div>
+      </nav>
+      <img src="images/goldfiatcover.png" class="song-img">
+      <h1>Gold Fiat</h1>
+      <p>MouSa Prod.Sam.AVI</p>
+
+      <audio id="song">
+        <source src="Audio/gold_fiat.mp3" type="audio/mpeg">
+      </audio>
+      <input type="range" value="0" id="progress">
+
+      <div class="controls">
+        <div><i class="fa-solid fa-backward"></i></div>
+        <div onclick="playPause()"><i class="fa-solid fa-play" id="ctrlIcon"></i></div>
+        <div><i class="fa-solid fa-forward"></i></div>
+
+      </div>
+
+    
+
+ </div>
+
+</div>
+
+<script>
+
+let progress = document.getElementById("progress");
+let song = document.getElementById("song");
+let ctrlIcon = document.getElementById("ctrlIcon");
+
+song.onloadedmetadata = function(){
+  progress.max = song.duration;
+  progress.value = song.currentTime;
+
+
+}
+
+function playPause(){
+  if(ctrlIcon.classList.contains("fa-pause")){
+    song.pause();
+    ctrlIcon.classList.remove("fa-pause");
+    ctrlIcon.classList.add("fa-play");
+  }
+  else{
+    song.play();
+    ctrlIcon.classList.remove("fa-play");
+    ctrlIcon.classList.add("fa-pause");
+  }
+}
+if(song.play()){
+  setInterval(()=>{
+        progress.value = song.currentTime;
+  },500)
+}
+progress.onchange = function(){
+  song.play();
+  song.currentTime = progress.value;
+  ctrlIcon.classList.remove("fa-play");
+  ctrlIcon.classList.add("fa-pause");
+}
+
+</script>
+
+    <div class="footer"><p>Mousa Media 2024</p></div>
+</div>
+    
+    <script>
+  /* When the user clicks on the button, 
+    toggle between hiding and showing the dropdown content */
+document.getElementById("drop").addEventListener("click", function(e) {
+  document.getElementById("myDropdown").classList.toggle("show");
+});
+
+
+// Close the dropdown if the user clicks outside of it
+window.addEventListener("click", function(event) {
+  if (!event.target.matches('.dropbtn')) {
+    document.querySelectorAll(".dropdown-content.show")
+      .forEach(openDropdown => openDropdown.classList.remove('show'))
+  }
+});
+</script>
+
+<style>
+.navbar{  
+  z-index:99;
+  position: relative;
+  top:10%;
+  right:0;
+  width:100%;
+  background-color: #0F1F38;
+  color: white;
+  text-align: center;
+  vertical-align:middle;
+  height: 9%;
+  padding-top:10px;
+  padding-bottom:10px;
+  
+} 
+
+#page-container {
+  position: relative;
+  min-height: 100vh;
+}
+
+#content-wrap {
+  padding-bottom: 80px;    /* Footer height */
+}
+
+
+.footer{  
+  display:block;
+  z-index:50;
+  position: relative;
+  padding-top:1%;
+   /* The more names you add to your webring display, the more you will have to increase the "top" value. */
+  top: 200px;
+  left:0;
+  right:0;
+  width:100%;
+  background-color: #FF8100;
+  color: rgb(0, 0, 0);
+  text-align: center;
+  height: 80px;
+}
+
+
+
+
+
+  #content { 
+  z-index:99;
+  height:100%;
+ 
+}
+
+
+  #namecontainer {
+  padding-top:5%;
+  padding-left:5%;
+  padding-right:5%;
+  padding-bottom:5%;
+  position: relative;
+  width: 65%;
+  margin: 0 auto;
+  top: 15vh;
+  left: 0;
+  right: 0;
+  background-color: #0F1F38;
+  border: 2px solid #e1e8e2;
+  text-align:center;
+  border-radius:25px;    
+      
+  }
+ 
+ 
+   .webringbanner{
+  padding:5%;  
+    
+    
+    
+  }    
+ 
+ .dropbtn {
+  border: 2px solid black;
+  background-color: white;
+  color: black;
+  padding: 10px 20px;
+  font-size: 2.5vh;
+  border-radius: 2px;
+  cursor: url(custompointerfilename.png), auto;
+  transition-duration: 0.0s;
+  /*must change manually to match css stylesheet body font*/
+  font-family: "futura";
+  src: url(Fonts/Futura\ Light\ Oblique.otf)
+}
+
+  .dropbtn:hover {
+  background-color: black; 
+  color: white;
+}
+
+  .cursor {
+  cursor: url(customcursorfilename.png), auto;
+  height: 350px;
+  width: 25%;
+  left: 200px;
+  position: absolute;
+  z-index: 99;
+
+}
+
+  .dropdown {
+  position: relative;
+  display: inline;
+  cursor: url(customcursorfilename.png), auto; 
+}
+
+  .dropdown-content {
+  display: none;
+  position: absolute;
+  left: 1%;
+  top: 10px;
+  background-color: #fff;
+  width: 93%;
+  z-index: 1;
+  margin-top: 20px;
+}
+
+  .dropdown-content a {
+  color: black;
+  padding: 5px 5px;
+  text-decoration: none;
+  display: block;
+}
+
+/* edit dropdown */
+  hr.solid {
+  border-left: 1px solid #fff;
+  border-right: 1px solid #fff;
+  border-top: 1px solid #fff;
+  border-bottom:  1px solid #fff;
+}
+
+  .show {
+  display: block;
+}
+ 
+ 
+
+  .menu {
+  padding:5px;
+  padding-top:10px;  
+} 
+
+
+ /* edit background color, add patterns, etc. */
+  body {
+  background:black;
+  background-size:100%;
+  background-image: url(mousa_world_bg.JPG);
+  background-repeat: repeat;
+  font-family: "Menlo";
+}
+
+@media screen and (max-width: 700px) { /* Specific to this particular element on phones*/
+.footer{  
+ font-size: 1.5vh;
+ }
+}
+
+@media screen and (max-width: 700px) { /* Specific to this particular element on phones*/
+.dropbtn {
+  font-size: 1.5vh;
+ }
+}
+
+@media screen and (max-width: 700px) { /* Specific to this particular element on phones*/
+ .dropdown-content a {
+  color: black;
+  padding: 5px 5px;
+  text-decoration: none;
+  display: block;
+  font-size: 1.5vh;
+ }
+}
+
+
+ @media screen and (max-width: 700px) { /* Specific to this particular element on phones.*/
+#namecontainer { 
+  padding-top:5%;
+  padding-left:5%;
+  padding-right:5%;
+  padding-bottom:10%;
+  position: relative;
+  width: 75%;
+  margin: 0 auto;
+  top: 8.5vh;
+  left: 0;
+  right: 0;
+  background-color: #98a39a;
+  border: 2px solid black;
+  border-radius:25px;
+  }
+} 
+
+
+
+@media screen and (max-width: 700px) { /* Specific to this particular element on phones.*/
+  .webringbanner{
+  padding:5%;  
+    
+    
+    
+  }     
+}      
+      
+</style>
+
+
+
+</body>
+</html>
