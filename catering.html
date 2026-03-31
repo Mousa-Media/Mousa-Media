@@ -3,21 +3,19 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mousa World</title>
-    <link rel="icon" href="mousaworldlogo.ico">
+    <title>Professional Portfolio</title>
+    <link rel="icon" href="mousaworldlogo.ico"> <!-- insert tab icon -->
     <link href="/style.css" rel="stylesheet" type="text/css" media="all">
-
-  </head>
-  
+  </head> 
   <body>
   <div id="page-container">
-   <div id="content-wrap">
- <!--1400px x 200px banner-->
+  <div id="content-wrap">
+     <!--1400px x 200px -->
   <div id="banner">
-<a href="music"> <img src='mousamusicbanner.png' style="
+ <a href="gallery"> <img src='mousagallerybanner.png' style="
 width:100%; height:100%; object-fit: fill; "> </a>
   </div>
- 
+
 
 
      <div class="navbar">
@@ -52,98 +50,26 @@ width:100%; height:100%; object-fit: fill; "> </a>
 <a href="catering"> <button id="button" class="dropbtn" >book me</button></a>
 
 
-
  <a href="comics"> <button id="button" class="dropbtn" >comics </button></a>
 
  <a href="music"> <button id="button" class="dropbtn" >music </button></a>
 
  <a href="webring"> <button id="button" class="dropbtn" >about me </button></a>
 
+
  </div> 
 
- <h1>Reporting live* from a frequency yet to be discovered</h1>
- <p style="text-align: center; color:#e1e8e2">on the air with 76.13 MWFM where we only play whatever I want</p>
+ <!-- Google Calendar Appointment Scheduling begin -->
+<iframe src="https://calendar.google.com/calendar/appointments/schedules/AcZssZ2O3Kgq0apbVnJkdFOrfC9IEPlkjkLLNP-52cFl9wDBwff72ahzS6KMHYF5IfQwbrl1WJSpsu9E?gv=true" style="border: 0" width="100%" height="600" frameborder="0"></iframe>
+<!-- end Google Calendar Appointment Scheduling -->
+
+
 
  
- 
-
-
-    <script src="https://kit.fontawesome.com/7d18af3f82.js" crossorigin="anonymous"></script>
-</head>
- <div class="container">
-    <div class="music-player">
-      <nav>
-        <div class="circle">
-          <i class="fa-solid fa-angles-left"></i>
-        </div>
-        <div class="circle">
-          <i class="fa-solid fa-bars"></i>
-        </div>
-      </nav>
-      <img src="images/goldfiatcover.png" class="song-img">
-      <h1>Gold Fiat</h1>
-      <p>MouSa Prod.Sam.AVI</p>
-
-      <audio id="song">
-        <source src="Audio/gold_fiat.mp3" type="audio/mpeg">
-      </audio>
-      <input type="range" value="0" id="progress">
-
-      <div class="controls">
-        <div><i class="fa-solid fa-backward"></i></div>
-        <div onclick="playPause()"><i class="fa-solid fa-play" id="ctrlIcon"></i></div>
-        <div><i class="fa-solid fa-forward"></i></div>
-
-      </div>
-
-    
-
- </div>
 
 </div>
-
-<script>
-
-let progress = document.getElementById("progress");
-let song = document.getElementById("song");
-let ctrlIcon = document.getElementById("ctrlIcon");
-
-song.onloadedmetadata = function(){
-  progress.max = song.duration;
-  progress.value = song.currentTime;
-
-
-}
-
-function playPause(){
-  if(ctrlIcon.classList.contains("fa-pause")){
-    song.pause();
-    ctrlIcon.classList.remove("fa-pause");
-    ctrlIcon.classList.add("fa-play");
-  }
-  else{
-    song.play();
-    ctrlIcon.classList.remove("fa-play");
-    ctrlIcon.classList.add("fa-pause");
-  }
-}
-if(song.play()){
-  setInterval(()=>{
-        progress.value = song.currentTime;
-  },500)
-}
-progress.onchange = function(){
-  song.play();
-  song.currentTime = progress.value;
-  ctrlIcon.classList.remove("fa-play");
-  ctrlIcon.classList.add("fa-pause");
-}
-
-</script>
-
-    <div class="footer"><p>Mousa Media 2026</p></div>
+<div class="footer"><p>Mousa Media 2026</p></div>
 </div>
-    
     <script>
   /* When the user clicks on the button, 
     toggle between hiding and showing the dropdown content */
@@ -161,14 +87,15 @@ window.addEventListener("click", function(event) {
 });
 </script>
 
+
 <style>
-.navbar{  
+  .navbar{  
   z-index:99;
   position: relative;
   top:10%;
   right:0;
   width:100%;
-  background-color: #0F1F38;
+  background-color: #FF8100;
   color: white;
   text-align: center;
   vertical-align:middle;
@@ -177,7 +104,6 @@ window.addEventListener("click", function(event) {
   padding-bottom:10px;
   
 } 
-
 #page-container {
   position: relative;
   min-height: 100vh;
@@ -193,13 +119,11 @@ window.addEventListener("click", function(event) {
   z-index:50;
   position: relative;
   padding-top:1%;
-   /* The more names you add to your webring display, the more you will have to increase the "top" value. */
-  top: 200px;
   left:0;
   right:0;
   width:100%;
   background-color: #FF8100;
-  color: rgb(0, 0, 0);
+  color: black;
   text-align: center;
   height: 80px;
 }
@@ -211,35 +135,18 @@ window.addEventListener("click", function(event) {
   #content { 
   z-index:99;
   height:100%;
- 
+  display:table;
+  padding-bottom:90px;
 }
 
 
-  #namecontainer {
-  padding-top:5%;
-  padding-left:5%;
-  padding-right:5%;
-  padding-bottom:5%;
-  position: relative;
-  width: 65%;
-  margin: 0 auto;
-  top: 15vh;
-  left: 0;
-  right: 0;
-  background-color: #0F1F38;
-  border: 2px solid #e1e8e2;
-  text-align:center;
-  border-radius:25px;    
+
       
-  }
+      
+      
+
  
  
-   .webringbanner{
-  padding:5%;  
-    
-    
-    
-  }    
  
  .dropbtn {
   border: 2px solid black;
@@ -279,12 +186,13 @@ window.addEventListener("click", function(event) {
   .dropdown-content {
   display: none;
   position: absolute;
-  left: 1%;
+  left: 0%;
   top: 10px;
   background-color: #fff;
   width: 93%;
   z-index: 1;
   margin-top: 20px;
+  
 }
 
   .dropdown-content a {
@@ -293,7 +201,6 @@ window.addEventListener("click", function(event) {
   text-decoration: none;
   display: block;
 }
-
 /* edit dropdown */
   hr.solid {
   border-left: 1px solid #fff;
@@ -312,16 +219,55 @@ window.addEventListener("click", function(event) {
   padding:5px;
   padding-top:10px;  
 } 
-
-
+ 
  /* edit background color, add patterns, etc. */
   body {
-  background:black;
-  background-size:100%;
-  background-image: url(mousa_world_bg.JPG);
-  background-repeat: repeat;
-  font-family: "Menlo";
+   background:#FDFCE8 );
+   font-family: "Menlo";
+ }
+
+
+ 
+ 
+ .gallery {
+
+	position: relative;
+	width: 35.5vh;
+	height:23vh;
+	margin-top: 14vh;
+	margin-right: 6vh;
+	border: 1px solid #ccc;
+	float: left;
+  left:5vw;
+  
+
 }
+
+div.gallery:hover {
+  border: 1px solid #fff;
+}
+
+.gallery img {
+	position: absolute;
+	left: 0;
+	top: 0;
+	height: 100%;
+	width: 100%;
+	object-fit: cover;
+}
+
+
+.desc {
+	display: block;
+	position: relative;
+	top: 120%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	text-align: center;
+  color:white;
+  overflow:visible;
+}
+
 
 @media screen and (max-width: 700px) { /* Specific to this particular element on phones*/
 .footer{  
@@ -344,36 +290,42 @@ window.addEventListener("click", function(event) {
   font-size: 1.5vh;
  }
 }
-
-
- @media screen and (max-width: 700px) { /* Specific to this particular element on phones.*/
-#namecontainer { 
-  padding-top:5%;
-  padding-left:5%;
-  padding-right:5%;
-  padding-bottom:10%;
+      
+@media only screen and (max-width: 700px) {
+.gallery {
   position: relative;
-  width: 75%;
-  margin: 0 auto;
-  top: 8.5vh;
-  left: 0;
-  right: 0;
-  background-color: #98a39a;
-  border: 2px solid black;
-  border-radius:25px;
+	width: 35%;
+  translate: 6% 0%;
+	height: 100px;
+	margin-top: 8vh;
+	border: 1px solid #ccc;
+	float: left;
+  top:5%;
+  
   }
-} 
-
-
-
-@media screen and (max-width: 700px) { /* Specific to this particular element on phones.*/
-  .webringbanner{
-  padding:5%;  
-    
-    
-    
-  }     
 }      
+
+@media only screen and (max-width: 700px) {
+.desc {
+ font-size: 1vh;
+ display: block;
+ position: relative;
+ text-align: center;
+  color:white;
+  overflow:visible;
+ }
+}
+
+@media only screen and (max-width: 700px) {
+ #content { 
+  z-index:99;
+  height:100%;
+  display:table;
+  padding-bottom:45px;
+ }
+} 
+      
+      
       
 </style>
 
